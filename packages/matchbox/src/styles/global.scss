@@ -3,7 +3,7 @@
 html {
   position: relative;
   box-sizing: border-box;
-  font-size: $base-font-size + 0px;
+  font-size: $DEFAULT_FONT_SIZE + 0px;
 }
 
 body {
@@ -12,7 +12,7 @@ body {
   padding: 0;
 
   color: color(gray, 2);
-  font-family: font-family();
+  font-family: font-family(base);
   @include text-style-body;
 }
 

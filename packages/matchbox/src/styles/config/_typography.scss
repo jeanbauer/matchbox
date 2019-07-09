@@ -1,37 +1,3 @@
-@import '~@sparkpost/design-tokens/dist/font-family.map.scss';
-@import '~@sparkpost/design-tokens/dist/font-size.map.scss';
-@import '~@sparkpost/design-tokens/dist/line-height.map.scss';
-
-// Returns a font family stack
-// @param {String} $font - The font family to use
-// @return {} The full font family stack
-
-@function font-family($font: base) {
-
-  @if map-has-key($font-family-map, $font) {
-    @return map-get($font-family-map, $font);
-  }
-
-  @error 'Font family stack `#{$font}` not found.';
-}
-
-@function font-size($size: 400) {
-  @if map-has-key($font-size-map, 'font-size-#{$size}') {
-    $unit: map-get($font-size-map, 'font-size-#{$size}');
-    @return rem($unit);
-  }
-
-  @error 'Font size `#{$size}` not found.';
-}
-
-@function line-height($line: 400) {
-  @if map-has-key($line-height-map, $line) {
-    @return map-get($line-height-map, $line);
-  }
-
-  @error 'Line height `#{$line}` not found.';
-}
-
 @mixin text-style-body {
   font-size: font-size(400);;
   font-weight: 400;
