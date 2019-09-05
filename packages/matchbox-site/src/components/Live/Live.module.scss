@@ -1,0 +1,17 @@
+.Live {
+  textarea:focus {
+    outline: none;
+  }
+
+  .CodeWrapper {
+    background: #000;
+    border-radius: 2px;
+    caret-color: #fff;
+    padding: 1rem;
+  }
+
+  .PreviewWrapper {
+    padding: 1rem;
+    border: 1px solid #eee;
+  }
+}
