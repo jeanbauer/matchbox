@@ -1,4 +1,4 @@
-import {extname, basename, dirname} from 'path';
+import { extname, basename, dirname } from 'path';
 
 const ATTRIBUTE = 'data-component';
 
@@ -13,9 +13,9 @@ export default function babelPluginReactDataAttr({ types: t }) {
     // console.log(path.parentPath.isExportNamedDeclaration())
     // console.log(path.scope.getBinding(name))
 
-    const { parentPath, node: { id } } = path;
+    const { parentPath, node: { id }} = path;
     // console.log(t.isIdentifier(), id.name)
-    console.log(path.type)
+    console.log(path.type);
   }
 
   function JSX(path, { source }) {
@@ -25,7 +25,7 @@ export default function babelPluginReactDataAttr({ types: t }) {
     }
 
     const openingElement = path.get('openingElement');
-    console.log(openingElement.node)
+    console.log(openingElement.node);
   }
 
   return {
@@ -33,7 +33,7 @@ export default function babelPluginReactDataAttr({ types: t }) {
     visitor: {
       // 'FunctionDeclaration|FunctionExpression|ArrowFunctionExpression': Functions,
       'JSXElement': JSX
-    },
+    }
   };
 }
 

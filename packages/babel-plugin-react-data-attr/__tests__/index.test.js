@@ -5,13 +5,13 @@ function transform(code, pluginOptions, transformOptions) {
   return babel.transform(code, {
     babelrc: false,
     plugins: [
-      [babelPluginReactDataAttr, pluginOptions],
+      [babelPluginReactDataAttr, pluginOptions]
     ],
     parserOpts: {
       plugins: ['jsx'],
-      presets: ['@babel/preset-react'],
+      presets: ['@babel/preset-react']
     },
-    ...transformOptions,
+    ...transformOptions
   }).code.trim();
 }
 
@@ -22,7 +22,7 @@ describe('babel-plugin-react-data-attr', () => {
       function MyComponent() {
         return <div />;
       }
-    `))
+    `));
     // expect(transform(`
     //   function MyComponent() {
     //     return <div />;

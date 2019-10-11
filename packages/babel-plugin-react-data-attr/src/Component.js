@@ -1,3 +1,3 @@
 function Component(props) {
-  return <div/>
+  return <div/>;
 }
