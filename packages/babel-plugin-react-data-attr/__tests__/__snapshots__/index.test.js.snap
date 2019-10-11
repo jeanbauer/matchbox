@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`babel-plugin-react-data-attr should not transform a returned react component 1`] = `
+"function MyComponent() {
+  return <TestComponent />;
+}"
+`;
+
+exports[`babel-plugin-react-data-attr should transform a returned html element 1`] = `
+"function MyComponent() {
+  return <div />;
+}"
+`;
+
+exports[`babel-plugin-react-data-attr should transform the first html element 1`] = `
+"function MyComponent() {
+  return <TestComponent>
+            <div></div>
+          </TestComponent>;
+}"
+`;

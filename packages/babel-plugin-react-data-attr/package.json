@@ -1,0 +1,43 @@
+{
+  "name": "babel-plugin-react-data-attr",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "Jon Ambas <jon@jonambas.com>",
+  "homepage": "https://github.com/SparkPost/matchbox#readme",
+  "license": "ISC",
+  "main": "lib/babel-plugin-react-data-attr.js",
+  "files": [
+    "lib",
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SparkPost/matchbox.git"
+  },
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "test": "jest --watch"
+  },
+  "bugs": {
+    "url": "https://github.com/SparkPost/matchbox/issues"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "jest": {
+    "testRegex": "[\\w+]\\.test\\.js$",
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
+  }
+}
